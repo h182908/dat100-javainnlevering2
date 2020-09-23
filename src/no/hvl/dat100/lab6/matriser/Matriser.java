@@ -64,6 +64,9 @@ public class Matriser {
 		
 		int[][] output_table = new int[a[0].length][b.length]; 
 		
+		if(a[0].length != b.length)
+			throw new UnsupportedOperationException("The amount of rows in a does not equal the amount of columns in b");
+		
 		for(int i = 0; i < output_table.length; i++)
 			for(int j = 0; j < output_table[0].length; j++)
 				for(int k = 0; k < a[0].length; k++)
